@@ -3,7 +3,125 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
-
-.markdown-outline {
-  background-color: #f00;
+@font-face {
+  font-family: 'symbol-icons';
+  src: url('atom://document-outline/icons/symbol-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@symbol-class:    '\e600';
+@symbol-struct:   '\e601';
+@symbol-macro:    '\e602';
+@symbol-typedef:  '\e603';
+@symbol-union:    '\e604';
+@symbol-interface:'\e605';
+@symbol-enum:     '\e606';
+@symbol-variable: '\e607';
+@symbol-function: '\e608';
+@symbol-namespace:'\e609';
+
+.symbol-icon(@name) {
+  font-family: 'symbol-icons';
+  content: @@name;
+}
+
+.document-outline {
+  // background-color: #f00;
+  width: 200px;
+  height: 100%;
+  padding: 4px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .find-result {
+    background-color: @background-color-info;
+  }
+
+
+
+  .icon-function::before {
+    .symbol-icon(symbol-function);
+  }
+
+  .icon-class::before {
+    .symbol-icon(symbol-class);
+  }
+
+  .icon-namespace::before {
+    .symbol-icon(symbol-namespace);
+  }
+
+  .icon-struct::before {
+    .symbol-icon(symbol-struct);
+  }
+
+  .icon-variable::before {
+    .symbol-icon(symbol-variable);
+  }
+
+  .icon-method::before {
+    .symbol-icon(symbol-function);
+  }
+
+  .icon-field::before {
+    .symbol-icon(symbol-variable);
+  }
+
+  .icon-member::before {
+    .symbol-icon(symbol-variable);
+  }
+
+  .icon-interface::before {
+    .symbol-icon(symbol-interface);
+  }
+
+  .icon-enum::before {
+    .symbol-icon(symbol-enum);
+  }
+
+  .icon-typedef::before {
+    .symbol-icon(symbol-typedef);
+  }
+
+  .icon-macro::before {
+    .symbol-icon(symbol-macro);
+  }
+
+  .icon-union::before {
+    .symbol-icon(symbol-union);
+  }
+
+
+
+}
+
+//
+//
+//
+// .symbols-context-menu {
+//   position: absolute;
+//   z-index: 1;
+//   width: 120px;
+//   .hidden-input {
+//     position: absolute;
+//     width: 0;
+//     height: 0;
+//     border: none;
+//   }
+//   .select-list.popover-list {
+//     width: 100%;
+//     min-width: 100%;
+//     ol {
+//       margin-top: 0;
+//       .separator {
+//         background: @background-color-highlight;
+//         height: 1px;
+//       }
+//       li:hover {
+//         background: @background-color-highlight;
+//       }
+//     }
+//   }
+// }

@@ -45,10 +45,9 @@ describe('MarkdownParse', () => {
       let buffer = new TextBuffer(testText);
 
       let prs = new MarkdownParse(buffer);
-      prs.recreateMarkers();
-      // let r = mdParse.scanH1(buffer);
+      console.log(prs.headingBlocks);
       // console.log(r);
-      // expect(r.length).toBeGreaterThan(0);
+      expect(prs.headingBlocks).toExist();
 
     });
   });

@@ -1,6 +1,6 @@
 'use babel';
 
-import MarkdownOutline from '../lib/markdown-outline';
+import MarkdownOutline from '../lib/document-outline';
 import mdParse from '../lib/markdown-parse';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -13,10 +13,10 @@ describe('MarkdownOutline', () => {
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('markdown-outline');
+    activationPromise = atom.packages.activatePackage('document-outline');
   });
 
-  describe('when the markdown-outline:toggle event is triggered', () => {
+  describe('when the document-outline:toggle event is triggered', () => {
     it('should parse the markdown file', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
@@ -26,7 +26,7 @@ describe('MarkdownOutline', () => {
       // activated.
       let filePath = 'test.md'
       let buffer
-      atom.commands.dispatch(workspaceElement, 'markdown-outline:toggle');
+      atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
