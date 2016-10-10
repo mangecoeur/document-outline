@@ -2,6 +2,8 @@
 import {TextBuffer} from 'atom';
 import MarkdownParse from '../lib/markdown-parse';
 
+import fs from 'fs';
+
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
@@ -45,8 +47,7 @@ describe('MarkdownParse', () => {
       let buffer = new TextBuffer(testText);
 
       let prs = new MarkdownParse(buffer);
-      console.log(prs.headingBlocks);
-      // console.log(r);
+
       expect(prs.headingBlocks).toExist();
 
     });

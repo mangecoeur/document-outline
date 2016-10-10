@@ -43,18 +43,18 @@ describe('MarkdownOutline', () => {
         });
 
 
-      // runs(() => {
-      //   // expect(workspaceElement.querySelector('.markdown-outline')).toExist();
-      //   // let markdownOutlineElement = workspaceElement.querySelector('.markdown-outline');
-      //   // expect(markdownOutlineElement).toExist();
-      //
-      //   // let markdownOutlinePanel = atom.workspace.panelForItem(markdownOutlineElement);
-      //   // expect(markdownOutlinePanel.isVisible()).toBe(true);
-      //
-      //   atom.commands.dispatch(workspaceElement, 'markdown-outline:toggle');
-      //   // for now, logging should be triggered here
-      //   // expect(markdownOutlinePanel.isVisible()).toBe(false);
-      // });
+      runs(() => {
+        expect(workspaceElement.querySelector('.document-outline')).toExist();
+        // let markdownOutlineElement = workspaceElement.querySelector('.markdown-outline');
+        // expect(markdownOutlineElement).toExist();
+
+        // let markdownOutlinePanel = atom.workspace.panelForItem(markdownOutlineElement);
+        // expect(markdownOutlinePanel.isVisible()).toBe(true);
+
+        // atom.commands.dispatch(workspaceElement, 'markdown-outline:toggle');
+        // for now, logging should be triggered here
+        // expect(markdownOutlinePanel.isVisible()).toBe(false);
+      });
     });
     //
     // it('hides and shows the view', () => {

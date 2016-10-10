@@ -3,6 +3,7 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
+@import "syntax-variables";
 @font-face {
   font-family: 'symbol-icons';
   src: url('atom://document-outline/icons/symbol-icons.woff') format('woff');
@@ -26,6 +27,38 @@
   content: @@name;
 }
 
+.document-outline-section-highlight {
+  background-color: @background-color-info;
+}
+
+.document-outline-section-highlight .region{
+  background-color: @background-color-info;
+}
+
+// result markers
+atom-text-editor,
+atom-text-editor::shadow {
+  .document-section .region {
+    background-color: transparent;
+    border-radius: @component-border-radius;
+    border: 1px solid @syntax-result-marker-color;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+
+  .current-section .region {
+    border-radius: @component-border-radius;
+    border: 1px solid @syntax-result-marker-color-selected;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+
+  // .document-section,
+  // .current-section {
+  //   display: none;
+  // }
+}
+
 .document-outline {
   // background-color: #f00;
   width: 200px;
@@ -35,10 +68,21 @@
   overflow-y: auto;
   overflow-x: hidden;
 
-  .find-result {
+  document-tree {
+
+  }
+
+  tree-node {
+    display: list-item;
+  }
+
+  tree-node span.selected {
     background-color: @background-color-info;
   }
 
+  .list-tree {
+    margin-left: 10px;
+  }
 
 
   .icon-function::before {
