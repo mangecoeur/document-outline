@@ -1,7 +1,7 @@
 'use babel';
 import {TextBuffer} from 'atom';
 import MarkdownParse from '../lib/markdown-parse';
-
+import path from 'path';
 import fs from 'fs';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -42,13 +42,26 @@ describe('MarkdownParse', () => {
   // });
 
   describe('when we run markdown pass on a text buffer', () => {
-    it('should parse the markdown file', () => {
+    it('should parse the markdown text', () => {
 
       let buffer = new TextBuffer(testText);
 
       let prs = new MarkdownParse(buffer);
 
-      expect(prs.headingBlocks).toExist();
+      expect(prs.headingBlocks.length).toBeGreaterThan(0);
+    });
+    it('should parse a markdown file text', () => {
+      let src = path.join(__dirname, "..", "spec", "longtext.md");
+      // let src = 'atom://document-outline/spec/test.json';
+
+      let testText = fs.readFileSync(src, "utf8");
+      let buffer = new TextBuffer(testText);
+
+      let prs = new MarkdownParse(buffer);
+
+      expect(prs.headingBlocks.length).toBeGreaterThan(0);
+      console.log(prs.headingBlocks);
+      expect(prs.headingBlocks.children.length).toBeGreaterThan(0);
 
     });
   });

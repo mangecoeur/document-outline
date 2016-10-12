@@ -11,16 +11,8 @@
   font-style: normal;
 }
 
-@symbol-class:    '\e600';
-@symbol-struct:   '\e601';
-@symbol-macro:    '\e602';
-@symbol-typedef:  '\e603';
-@symbol-union:    '\e604';
-@symbol-interface:'\e605';
-@symbol-enum:     '\e606';
-@symbol-variable: '\e607';
-@symbol-function: '\e608';
-@symbol-namespace:'\e609';
+@symbol-generic: '\e600';
+
 
 .symbol-icon(@name) {
   font-family: 'symbol-icons';
@@ -39,7 +31,7 @@
 atom-text-editor,
 atom-text-editor::shadow {
   .document-section .region {
-    background-color: transparent;
+    background-color: @syntax-result-marker-color;
     border-radius: @component-border-radius;
     border: 1px solid @syntax-result-marker-color;
     box-sizing: border-box;
@@ -74,69 +66,24 @@ atom-text-editor::shadow {
 
   tree-node {
     display: list-item;
+
+    tree-item-text:hover {
+      text-decoration: underline;
+    }
   }
 
-  tree-node span.selected {
-    background-color: @background-color-info;
-  }
+  // tree-node span.selected {
+  //   background-color: @background-color-info;
+  // }
 
   .list-tree {
     margin-left: 10px;
   }
 
 
-  .icon-function::before {
-    .symbol-icon(symbol-function);
+  .icon-generic::before {
+    .symbol-icon(symbol-generic);
   }
-
-  .icon-class::before {
-    .symbol-icon(symbol-class);
-  }
-
-  .icon-namespace::before {
-    .symbol-icon(symbol-namespace);
-  }
-
-  .icon-struct::before {
-    .symbol-icon(symbol-struct);
-  }
-
-  .icon-variable::before {
-    .symbol-icon(symbol-variable);
-  }
-
-  .icon-method::before {
-    .symbol-icon(symbol-function);
-  }
-
-  .icon-field::before {
-    .symbol-icon(symbol-variable);
-  }
-
-  .icon-member::before {
-    .symbol-icon(symbol-variable);
-  }
-
-  .icon-interface::before {
-    .symbol-icon(symbol-interface);
-  }
-
-  .icon-enum::before {
-    .symbol-icon(symbol-enum);
-  }
-
-  .icon-typedef::before {
-    .symbol-icon(symbol-typedef);
-  }
-
-  .icon-macro::before {
-    .symbol-icon(symbol-macro);
-  }
-
-  .icon-union::before {
-    .symbol-icon(symbol-union);
-  }
-
 
 
 }

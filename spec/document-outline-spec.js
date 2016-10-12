@@ -1,14 +1,15 @@
 'use babel';
 
-import MarkdownOutline from '../lib/document-outline';
+import DocumentOutline from '../lib/document-outline';
 import mdParse from '../lib/markdown-parse';
+import path from 'path';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('MarkdownOutline', () => {
+describe('DocumentOutline', () => {
   let editor, workspaceElement, activationPromise;
 
   beforeEach(() => {
@@ -24,7 +25,7 @@ describe('MarkdownOutline', () => {
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      let filePath = 'test.md'
+      let filePath =  path.join(__dirname, "..", "spec", 'test.md')
       let buffer
       atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
@@ -40,13 +41,12 @@ describe('MarkdownOutline', () => {
 
       waitsForPromise(() => {
           return openFilePromise;
-        });
-
+      });
 
       runs(() => {
         expect(workspaceElement.querySelector('.document-outline')).toExist();
-        // let markdownOutlineElement = workspaceElement.querySelector('.markdown-outline');
-        // expect(markdownOutlineElement).toExist();
+        let markdownOutlineElement = workspaceElement.querySelector('.document-outline');
+        expect(markdownOutlineElement).toExist();
 
         // let markdownOutlinePanel = atom.workspace.panelForItem(markdownOutlineElement);
         // expect(markdownOutlinePanel.isVisible()).toBe(true);

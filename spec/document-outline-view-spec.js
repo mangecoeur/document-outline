@@ -12,6 +12,6 @@ describe('DocumentOutlineView', () => {
 
     let headingBlocks = JSON.parse(fs.readFileSync(src));
     let view = new DocumentOutlineView(headingBlocks);
-    expect(view).toExist();
+    expect(view).not.toBeNull();
   });
 });
