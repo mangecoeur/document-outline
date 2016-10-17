@@ -2,19 +2,20 @@
   "name": "document-outline",
   "main": "./lib/document-outline",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "document-outline:toggle"
-  },
+  "description": "Show a heirarchical outline of a text document",
+  "keywords": [
+    "markdown",
+    "text",
+    "productivity",
+    "academic"
+  ],
   "repository": "https://github.com/atom/document-outline",
   "license": "GPL-3.0",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.11.0 <2.0.0"
   },
   "dependencies": {
-    "event-kit": "^2.1.0",
-    "jqtree": "^1.3.5"
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "eslint": "^3.7.0",
