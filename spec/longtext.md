@@ -1,9 +1,11 @@
 # Method
 
-{>> TODO: references <<}
-{>> TODO: follow ISO13790 symbol conventions<<}
+Typing some sutff whatever this is fine blash  measurement
 
-## Introduction
+{>> still does  <<}
+
+
+## Introduction 
 
 ## Physical model of building thermals and energy demand
 

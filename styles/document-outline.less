@@ -4,20 +4,7 @@
 // for a full listing of what's available.
 @import "ui-variables";
 @import "syntax-variables";
-@font-face {
-  font-family: 'symbol-icons';
-  src: url('atom://document-outline/icons/symbol-icons.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@symbol-generic: '\e600';
-
-
-.symbol-icon(@name) {
-  font-family: 'symbol-icons';
-  content: @@name;
-}
 
 .document-outline-section-highlight {
   background-color: @background-color-info;
@@ -44,48 +31,120 @@ atom-text-editor::shadow {
     box-sizing: border-box;
     z-index: 0;
   }
-
-  // .document-section,
-  // .current-section {
-  //   display: none;
-  // }
 }
 
+
 .document-outline {
-  // background-color: #f00;
+  position: relative;
   width: 200px;
+  min-width: 100px;
   height: 100%;
   padding: 4px;
-  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-
+  // overflow: hidden;
+  cursor: default;
+  -webkit-user-select: none;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  //
+  // // use these classes to re-order
+  // // using a value in-between is fine too, e.g. order: -3;
+  // & > .order--start  { order: -10; }
+  // & > .order--center { order:   0; }
+  // & > .order--end    { order:  10; }
   document-tree {
 
   }
 
+  .document-outline-resize-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    width: 10px;
+    cursor: col-resize;
+    z-index: 3;
+  }
+
+  [draggable] {
+    user-select: none;
+  }
   tree-node {
+    padding: 1px
+  }
+  tree-node:hover {
+    padding: 0px;
+    border: @pane-item-border-color 1px solid;
+    border-radius: 3px;
+  }
+
+
+  tree-node.list-nested-item {
+    margin-top: 5px;
     display: list-item;
 
-    tree-item-text:hover {
-      text-decoration: underline;
+    span.tree-item-text {
+      line-height: normal;
+      font-weight: normal;
+    }
+
+    span.tree-item-text.selected{
+      background-color: @background-color-info;
+      transition: background 0.5s linear;
+    }
+
+    // .icon {
+    //   margin-right: 0em;
+    // }
+    .icon.icon-chevron-down:before {
+      margin-right: 0em;
+    }
+
+    .icon.icon-one-dot {
+      margin-bottom: -0.5em;
+      overflow: hidden;
+    }
+
+    .icon.icon-one-dot:before {
+        content: "\25cf";
+        font-size: 0.8em;
+    }
+
+    span.tree-item-text:hover {
+      // font-weight: bold;
+      // text-decoration: underline;
+    }
+
+    .list-tree {
+      margin-left: 10px;
+    }
+
+    &.level1 span.tree-item-text{
+      font-weight: bold;
+    }
+
+    &.level2 span.tree-item-text{
+      font-weight: normal;
+    }
+
+    &.level1{
+      z-index: 100;
+    }
+
+    &.level2{
+      z-index: 200;
+    }
+
+    &.level3{
+      z-index: 300;
+    }
+
+    &.level4{
+      z-index: 400;
     }
   }
-
-  // tree-node span.selected {
-  //   background-color: @background-color-info;
-  // }
-
-  .list-tree {
-    margin-left: 10px;
-  }
-
-
-  .icon-generic::before {
-    .symbol-icon(symbol-generic);
-  }
-
-
 }
 
 //
