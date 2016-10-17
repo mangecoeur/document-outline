@@ -9,7 +9,7 @@
     "productivity",
     "academic"
   ],
-  "repository": "https://github.com/atom/document-outline",
+  "repository": "https://github.com/mangecoeur/document-outline",
   "license": "GPL-3.0",
   "engines": {
     "atom": ">=1.11.0 <2.0.0"
