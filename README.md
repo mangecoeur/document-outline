@@ -1,21 +1,16 @@
 # Document Outline
-A short description of your package.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Displays a hierarchical, interactive outline tree view of your document. This is particularly useful for working on long form documents such as academic papers and theses.
 
+![screenshot of document-outline](https://raw.githubusercontent.com/mangecoeur/document-outline/master/document-outline-screenshot.png)
+
+## Usage
+
+Trigger using `document-outline:toggle` or enable `show by default` setting. Single click to jump to heading in document, double click to collapse sub-headings.
 
 ## TODO
 
-- update outline to parse current document when switching between markdown editors but make sure it stays hidden at other times
-- fix heading highlighting
-  - clear current when selecting other
-  - animate/fadeout highlight
-
 - drag-and-drop reordering of headings
-  - On mousedown, create UI element that will follow mouse (shadow copy of tree node or something)
-  - As you drag, show UI to indicate where selection will land
-  - To change text, on mouse drop (although could start process as soon as start drag):
-    - Cut text from treenode range start to end
-    - From item list, figure out which node you are dropping after > ideally should be able to get the TreeNode.item
-    - paste text at prevnode.end
-    - re-parse the document to refresh the tree
+- section highlighting
+- support for non-ATX headers in markdown
+- support for other languages (priority LaTeX)
