@@ -55,7 +55,7 @@ atom-text-editor::shadow {
   // & > .order--center { order:   0; }
   // & > .order--end    { order:  10; }
   document-tree {
-
+    margin-left: 5px;
   }
 
   .document-outline-resize-handle {
@@ -68,17 +68,18 @@ atom-text-editor::shadow {
     z-index: 3;
   }
 
-  [draggable] {
-    user-select: none;
-  }
-  tree-node {
-    padding: 1px
-  }
-  tree-node:hover {
-    padding: 0px;
-    border: @pane-item-border-color 1px solid;
-    border-radius: 3px;
-  }
+  // [draggable] {
+  //   user-select: none;
+  // }
+  // tree-node {
+  //   padding: 1px
+  // }
+  //
+  // tree-node:hover {
+  //   padding: 0px;
+  //   border: @pane-item-border-color 1px solid;
+  //   border-radius: 3px;
+  // }
 
 
   tree-node.list-nested-item {
@@ -115,6 +116,16 @@ atom-text-editor::shadow {
     span.tree-item-text:hover {
       // font-weight: bold;
       // text-decoration: underline;
+      // @pane-item-background-color
+      // @text-color
+      // border-bottom: 1px solid fade(@text-color, 0%);
+      transition: border 500ms ease;
+    }
+
+    span.tree-item-text:hover {
+      // font-weight: bold;
+      text-decoration: underline;
+      // border-bottom: 1px solid fade(@text-color, 80%);
     }
 
     .list-tree {
