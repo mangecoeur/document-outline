@@ -12,7 +12,7 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "document-outline",
+          "label": "Document Outline",
           "submenu": [
             {
               "label": "Toggle",

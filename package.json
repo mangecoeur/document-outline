@@ -5,9 +5,12 @@
   "description": "Show a heirarchical outline of a text document",
   "keywords": [
     "markdown",
+    "commonmark",
     "text",
     "productivity",
-    "academic"
+    "academic",
+    "outline",
+    "tree"
   ],
   "repository": "https://github.com/mangecoeur/document-outline",
   "license": "GPL-3.0",
