@@ -1,12 +1,4 @@
 {
-  "context-menu": {
-    "atom-text-editor": [
-      {
-        "label": "Toggle document-outline",
-        "command": "document-outline:toggle"
-      }
-    ]
-  },
   "menu": [
     {
       "label": "Packages",

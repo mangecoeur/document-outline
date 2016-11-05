@@ -1,7 +1,7 @@
 'use babel';
+/* eslint-env node, browser, jasmine */
 
 import DocumentOutline from '../lib/document-outline';
-import mdParse from '../lib/markdown-parse';
 import path from 'path';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -25,8 +25,8 @@ describe('DocumentOutline', () => {
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      let filePath =  path.join(__dirname, "..", "spec", 'test.md')
-      let buffer
+      let filePath = path.join(__dirname, "..", "spec", 'test.md');
+      let buffer;
       atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
       waitsForPromise(() => {
@@ -40,13 +40,13 @@ describe('DocumentOutline', () => {
       });
 
       waitsForPromise(() => {
-          return openFilePromise;
+        return openFilePromise;
       });
 
       runs(() => {
         expect(workspaceElement.querySelector('.document-outline')).toExist();
-        let markdownOutlineElement = workspaceElement.querySelector('.document-outline');
-        expect(markdownOutlineElement).toExist();
+        // let markdownOutlineElement = workspaceElement.querySelector('.document-outline');
+        // expect(markdownOutlineElement).toExist();
 
         // let markdownOutlinePanel = atom.workspace.panelForItem(markdownOutlineElement);
         // expect(markdownOutlinePanel.isVisible()).toBe(true);

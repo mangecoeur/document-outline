@@ -1,6 +1,8 @@
 'use babel';
+/* eslint-env node, browser, jasmine */
+
 import {TextBuffer} from 'atom';
-import MarkdownParse from '../lib/markdown-parse';
+import MarkdownModel from '../lib/markdown-model';
 import path from 'path';
 import fs from 'fs';
 
@@ -14,6 +16,7 @@ var testText = `# first h1
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## first h2
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ### Heading 3
@@ -34,7 +37,7 @@ Second h2 paragraph...
 
 `;
 
-describe('MarkdownParse', () => {
+describe('MarkdownModel', () => {
 
   // beforeEach(() => {
   //   workspaceElement = atom.views.getView(atom.workspace);
@@ -46,9 +49,12 @@ describe('MarkdownParse', () => {
 
       let buffer = new TextBuffer(testText);
 
-      let prs = new MarkdownParse(buffer);
+      let model = new MarkdownModel(buffer);
+      console.log(model.headings);
+      expect(model.headings.length).toBeGreaterThan(0);
+      expect(model.headings.length).toEqual(2);
+      expect(model.headings[0].length).toEqual(3);
 
-      expect(prs.headingBlocks.length).toBeGreaterThan(0);
     });
     it('should parse a markdown file text', () => {
       let src = path.join(__dirname, "..", "spec", "longtext.md");
@@ -57,11 +63,11 @@ describe('MarkdownParse', () => {
       let testText = fs.readFileSync(src, "utf8");
       let buffer = new TextBuffer(testText);
 
-      let prs = new MarkdownParse(buffer);
+      let model = new MarkdownModel(buffer);
 
-      expect(prs.headingBlocks.length).toBeGreaterThan(0);
-      console.log(prs.headingBlocks);
-      expect(prs.headingBlocks.children.length).toBeGreaterThan(0);
+      expect(model.headings.length).toBeGreaterThan(0);
+      console.log(model.headings);
+      expect(model.headings[0].children.length).toBeGreaterThan(0);
 
     });
   });
