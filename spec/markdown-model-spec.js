@@ -50,10 +50,8 @@ describe('MarkdownModel', () => {
       let buffer = new TextBuffer(testText);
 
       let model = new MarkdownModel(buffer);
-      console.log(model.headings);
-      expect(model.headings.length).toBeGreaterThan(0);
       expect(model.headings.length).toEqual(2);
-      expect(model.headings[0].length).toEqual(3);
+      expect(model.headings[0].children.length).toEqual(2);
 
     });
     it('should parse a markdown file text', () => {
@@ -66,7 +64,6 @@ describe('MarkdownModel', () => {
       let model = new MarkdownModel(buffer);
 
       expect(model.headings.length).toBeGreaterThan(0);
-      console.log(model.headings);
       expect(model.headings[0].children.length).toBeGreaterThan(0);
 
     });

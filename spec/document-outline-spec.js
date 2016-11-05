@@ -26,8 +26,6 @@ describe('DocumentOutline', () => {
       // This is an activation event, triggering it will cause the package to be
       // activated.
       let filePath = path.join(__dirname, "..", "spec", 'test.md');
-      let buffer;
-      atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -37,52 +35,11 @@ describe('DocumentOutline', () => {
       openFilePromise.then(ed => {
         editor = ed;
         editor.setGrammar(atom.grammars.grammarForScopeName('source.gfm'));
-      });
+        console.log(editor);
+        // atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
-      waitsForPromise(() => {
-        return openFilePromise;
-      });
-
-      runs(() => {
         expect(workspaceElement.querySelector('.document-outline')).toExist();
-        // let markdownOutlineElement = workspaceElement.querySelector('.document-outline');
-        // expect(markdownOutlineElement).toExist();
-
-        // let markdownOutlinePanel = atom.workspace.panelForItem(markdownOutlineElement);
-        // expect(markdownOutlinePanel.isVisible()).toBe(true);
-
-        // atom.commands.dispatch(workspaceElement, 'markdown-outline:toggle');
-        // for now, logging should be triggered here
-        // expect(markdownOutlinePanel.isVisible()).toBe(false);
       });
     });
-    //
-    // it('hides and shows the view', () => {
-    //   // This test shows you an integration test testing at the view level.
-    //
-    //   // Attaching the workspaceElement to the DOM is required to allow the
-    //   // `toBeVisible()` matchers to work. Anything testing visibility or focus
-    //   // requires that the workspaceElement is on the DOM. Tests that attach the
-    //   // workspaceElement to the DOM are generally slower than those off DOM.
-    //   jasmine.attachToDOM(workspaceElement);
-    //
-    //   expect(workspaceElement.querySelector('.markdown-outline')).not.toExist();
-    //
-    //   // This is an activation event, triggering it causes the package to be
-    //   // activated.
-    //   atom.commands.dispatch(workspaceElement, 'markdown-outline:toggle');
-    //
-    //   waitsForPromise(() => {
-    //     return activationPromise;
-    //   });
-    //
-    //   runs(() => {
-    //     // Now we can test for view visibility
-    //     let markdownOutlineElement = workspaceElement.querySelector('.markdown-outline');
-    //     expect(markdownOutlineElement).toBeVisible();
-    //     atom.commands.dispatch(workspaceElement, 'markdown-outline:toggle');
-    //     expect(markdownOutlineElement).not.toBeVisible();
-    //   });
-    // });
   });
 });

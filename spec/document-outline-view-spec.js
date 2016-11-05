@@ -10,9 +10,17 @@ describe('DocumentOutlineView', () => {
   it('has one valid test', () => {
     let src = path.join(__dirname, "..", "spec", "test.json");
     // let src = 'atom://document-outline/spec/test.json';
+    let editor;
+    let openFilePromise = atom.workspace.open(path.join(__dirname, "..", "spec", 'test.md'));
 
-    let model = JSON.parse(fs.readFileSync(src));
-    let view = new DocumentOutlineView(model);
-    expect(view).not.toBeNull();
+    openFilePromise.then(ed => {
+      editor = ed;
+      editor.setGrammar(atom.grammars.grammarForScopeName('source.gfm'));
+      let mockModel = JSON.parse(fs.readFileSync(src));
+      mockModel.onDidUpdate = () => {};
+
+      let view = new DocumentOutlineView(editor, mockModel);
+      expect(view).not.toBeNull();
+    });
   });
 });
