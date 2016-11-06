@@ -5,6 +5,18 @@
 @import "ui-variables";
 @import "syntax-variables";
 
+#draggable{
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 10px 5px;
+}
+
+#dropzone {
+    width: 100px;
+    height: 100px;
+    border: 5px dashed #333;
+}
 
 .document-outline-section-highlight {
   background-color: @background-color-info;
@@ -42,9 +54,8 @@ atom-text-editor::shadow {
   padding: 4px;
   overflow-y: auto;
   overflow-x: hidden;
-  // overflow: hidden;
   cursor: default;
-  -webkit-user-select: none;
+  user-select: none;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -71,9 +82,9 @@ atom-text-editor::shadow {
   // [draggable] {
   //   user-select: none;
   // }
-  // tree-node {
-  //   padding: 1px
-  // }
+  tree-node {
+    // background: #900;
+  }
   //
   // tree-node:hover {
   //   padding: 0px;
@@ -81,6 +92,11 @@ atom-text-editor::shadow {
   //   border-radius: 3px;
   // }
 
+  .droptarget {
+      border-bottom: 5px;
+      border-style: solid;
+      border-color: @background-color-info;
+  }
 
   tree-node.list-nested-item {
     margin-top: 5px;
