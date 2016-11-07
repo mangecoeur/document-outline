@@ -26,8 +26,6 @@ Some handy packages for working on long form markdown documents:
 ## TODO
 
 - drag-and-drop reordering of headings
-- section highlighting
 - support for non-ATX headers in markdown
-- support for other languages (priority LaTeX)
 
 Contributions welcome!
