@@ -1,7 +1,7 @@
 {
   "name": "document-outline",
   "main": "./lib/document-outline",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Show a heirarchical outline of a text document",
   "keywords": [
     "outline",
