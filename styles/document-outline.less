@@ -103,6 +103,14 @@ atom-text-editor::shadow {
     padding: 1px 4px;
     display: list-item;
 
+    &.highlight {
+      background: fade(@background-color-highlight, 30%);
+      background-blend-mode: soft-light;
+      border: 1px solid @base-border-color;
+      padding: 0 3px;
+
+    }
+
     span.tree-item-text {
       line-height: normal;
       font-weight: normal;
