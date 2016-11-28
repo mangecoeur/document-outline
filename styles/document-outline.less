@@ -99,14 +99,17 @@ atom-text-editor::shadow {
   }
 
   tree-node.list-nested-item {
-    margin-top: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     padding: 1px 4px;
     display: list-item;
 
     &.highlight {
+      color: @text-color;
       background: fade(@background-color-highlight, 30%);
-      background-blend-mode: soft-light;
+      // background-blend-mode: soft-light;
       border: 1px solid @base-border-color;
+      border-radius: @component-border-radius;
       padding: 0 3px;
 
     }
@@ -138,13 +141,13 @@ atom-text-editor::shadow {
         font-size: 0.6em;
     }
 
-    span.tree-item-text:hover {
+    span.tree-item-text {
       // font-weight: bold;
       // text-decoration: underline;
       // @pane-item-background-color
       // @text-color
       // border-bottom: 1px solid fade(@text-color, 0%);
-      transition: border 500ms ease;
+      // transition: border 500ms ease;
     }
 
     span.tree-item-text:hover {
