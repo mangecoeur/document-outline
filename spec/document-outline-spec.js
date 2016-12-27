@@ -35,7 +35,6 @@ describe('DocumentOutline', () => {
       openFilePromise.then(ed => {
         editor = ed;
         editor.setGrammar(atom.grammars.grammarForScopeName('source.gfm'));
-        console.log(editor);
         // atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
         expect(workspaceElement.querySelector('.document-outline')).toExist();

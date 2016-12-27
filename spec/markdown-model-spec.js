@@ -62,7 +62,7 @@ describe('MarkdownModel', () => {
       let buffer = new TextBuffer(testText);
 
       let model = new MarkdownModel(buffer);
-
+      model.update();
       expect(model.headings.length).toBeGreaterThan(0);
       expect(model.headings[0].children.length).toBeGreaterThan(0);
 
