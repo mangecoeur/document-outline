@@ -1,3 +1,4 @@
-## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+## 1.1
+
+* More robust handling of header nesting
+* Better handling of Latex header hierarchy
