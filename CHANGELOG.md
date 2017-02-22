@@ -1,3 +1,7 @@
+## 1.1.3
+
+* Fixes for some memory leaks
+
 ## 1.1.1
 
 * Nicer auto-scroll of outline
