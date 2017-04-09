@@ -1,3 +1,8 @@
+## 1.2.0
+
+* Added support for Setext headers (@komeda-shinji )
+* Added support for RST files (@komeda-shinji)
+
 ## 1.1.3
 
 * Fixes for some memory leaks

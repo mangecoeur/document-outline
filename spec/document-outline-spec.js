@@ -4,11 +4,6 @@
 import DocumentOutline from '../lib/document-outline';
 import path from 'path';
 
-// Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
-//
-// To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
-// or `fdescribe`). Remove the `f` to unfocus the block.
-
 describe('DocumentOutline', () => {
   let editor, workspaceElement, activationPromise;
 
@@ -35,7 +30,7 @@ describe('DocumentOutline', () => {
       openFilePromise.then(ed => {
         editor = ed;
         editor.setGrammar(atom.grammars.grammarForScopeName('source.gfm'));
-        // atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
+        atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
         expect(workspaceElement.querySelector('.document-outline')).toExist();
       });
