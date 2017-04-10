@@ -26,6 +26,5 @@ Some handy packages for working on long form markdown documents:
 ## TODO
 
 - drag-and-drop reordering of headings
-- support for non-ATX headers in markdown
 
 Contributions welcome!
