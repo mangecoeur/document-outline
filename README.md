@@ -8,6 +8,8 @@ Displays a hierarchical, interactive outline tree view of your document. This is
 
 Trigger using `document-outline:toggle` or enable `show by default` setting. Single click to jump to heading in document, double click to collapse sub-headings.
 
+Note: for simplicity, only 'modern' UI themes are supported (i.e. not the atom-light or atom-dark themes). Should work for popular UI themes including One-light/dark and Atom-material.
+
 
 ## Why?
 
