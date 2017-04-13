@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Use commonmark to do proper parsing of markdown headings.
+
 ## 1.2.1
 
 * Revert requirement for blank line after heading

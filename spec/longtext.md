@@ -14,7 +14,7 @@ terris nimium. Sine deae in vel spem plangorem deus montes nova pares, non.
 - Demens consulit tantis quicquid constitit nemorum
 - Se sinus deceptus artus vitiataque oriuntur coronatis
 
-## Congelat nataeque longius quoque plus capillis quae 3
+## Congelat nataeque longius $\Phi$ plus capillis quae 3
 
 Hanc suis tela cupido sedens. Cytherea nam Esse simillimus rugosis.
 
