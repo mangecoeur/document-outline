@@ -1,3 +1,7 @@
+## 1.2.1
+
+* Revert requirement for blank line after heading
+
 ## 1.2.0
 
 * Added support for Setext headers (@komeda-shinji )
