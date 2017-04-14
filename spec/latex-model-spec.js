@@ -56,7 +56,7 @@ pervenit, hic sensit, tellusAndros femineos miles feres fiat venis!
 describe('LatexModel', () => {
   describe('when we run latex pass on a text buffer', () => {
     it('should parse a latex file text', () => {
-      let src = path.join(__dirname, "..", "spec", "test.latex");
+      let src = path.join(__dirname, "..", "spec", "test.tex");
       // let src = 'atom://document-outline/spec/test.json';
 
       let testText = fs.readFileSync(src, "utf8");

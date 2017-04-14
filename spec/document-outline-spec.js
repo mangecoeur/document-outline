@@ -1,7 +1,6 @@
 'use babel';
 /* eslint-env node, browser, jasmine */
 
-import DocumentOutline from '../lib/document-outline';
 import path from 'path';
 
 describe('DocumentOutline', () => {
@@ -30,9 +29,11 @@ describe('DocumentOutline', () => {
       openFilePromise.then(ed => {
         editor = ed;
         editor.setGrammar(atom.grammars.grammarForScopeName('source.gfm'));
-        atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
 
-        expect(workspaceElement.querySelector('.document-outline')).toExist();
+        let toggle = atom.commands.dispatch(workspaceElement, 'document-outline:toggle');
+        toggle.then(() => {
+          expect(workspaceElement.querySelector('.document-outline')).toExist();
+        });
       });
     });
   });
