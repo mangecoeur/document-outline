@@ -1,8 +1,17 @@
 # Document Outline
 
-Displays a hierarchical, interactive outline tree view of your document. This is particularly useful for working on long form documents such as academic papers and theses. Supports Markdown and Latex documents.
+Displays a hierarchical, interactive outline tree view of your document. This is particularly useful for working on long form documents such as academic papers and theses.
 
 ![screenshot of document-outline](https://raw.githubusercontent.com/mangecoeur/document-outline/master/document-outline-screenshot.png)
+
+## Support types
+
+Currently supports:
+
+- Markdown (Commonmark)
+- Latex
+- ReStructuredText
+- AsciiDoc
 
 ## Usage
 
