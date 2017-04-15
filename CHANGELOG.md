@@ -1,3 +1,9 @@
+## 1.4.0
+
+* Added basic ASCIIDOC support
+* Improved performance (lower memory)
+* Fixes for slow-down over time under certain conditions
+
 ## 1.3.0
 
 * Use commonmark to do proper parsing of markdown headings.
