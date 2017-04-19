@@ -12,6 +12,7 @@ Currently supports:
 - Latex
 - ReStructuredText
 - AsciiDoc
+- Knitr
 
 ## Usage
 
@@ -22,7 +23,7 @@ Note: for simplicity, only 'modern' UI themes are supported (i.e. not the atom-l
 
 ## Why?
 
-It's easy to get lost working on long documents - an outline view is a huge help. However, the default atom navigator (and its symbol-tree-view outline sibling) don't handle markdown heading hierarchy and don't really make it possible to add in. Other projects with similar goals seem to be unmaintained and unmaintainable. Plus, thanks to the way we process markdown, we can enable unique features like drag-and-drop reordering of headings in the future.
+It's easy to get lost working on long documents - an outline view is a huge help. With document-outline, jump to headings in your document, and see the currently edited section highlighted in the outline.
 
 ## See also
 

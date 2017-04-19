@@ -8,10 +8,10 @@
     "markdown",
     "latex",
     "commonmark",
-    "productivity",
-    "tree",
+    "knitr",
     "academic",
-    "text"
+    "text",
+    "asciidoc"
   ],
   "repository": "https://github.com/mangecoeur/document-outline",
   "license": "GPL-3.0",

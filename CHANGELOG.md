@@ -1,7 +1,7 @@
 ## 1.4.2
 
 * Remember the outline width between documents
-* Misc optimisations
+* Improved fix for editor slowdown over time issue
 
 ## 1.4.0
 
