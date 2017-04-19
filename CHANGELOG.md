@@ -1,3 +1,7 @@
+## 1.4.3
+
+* Fix for latex/beamer handling #17
+
 ## 1.4.2
 
 * Remember the outline width between documents
