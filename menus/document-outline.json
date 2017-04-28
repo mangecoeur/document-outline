@@ -9,6 +9,10 @@
             {
               "label": "Toggle",
               "command": "document-outline:toggle"
+            },
+            {
+              "label": "Toggle Side",
+              "command": "document-outline:toggle-side"
             }
           ]
         }
