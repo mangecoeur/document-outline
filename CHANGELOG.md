@@ -1,3 +1,7 @@
+## 1.4.6
+
+* Improve performance while highlighting
+
 ## 1.4.3
 
 * Fix for latex/beamer handling #17
