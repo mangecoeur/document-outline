@@ -1,3 +1,7 @@
+## 1.4.7
+
+* Don't generate items for commented out latex headings
+
 ## 1.4.6
 
 * Improve performance while highlighting
