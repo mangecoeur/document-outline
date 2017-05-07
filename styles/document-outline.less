@@ -68,11 +68,21 @@ atom-text-editor.editor {
     margin-left: 5px;
   }
 
-  .document-outline-resize-handle {
+  .document-outline-resize-left-handle {
     position: absolute;
     top: 0;
     bottom: 0;
     left: -5px;
+    width: 10px;
+    cursor: col-resize;
+    z-index: 3;
+  }
+
+  .document-outline-resize-right-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
     width: 10px;
     cursor: col-resize;
     z-index: 3;
