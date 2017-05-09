@@ -1,3 +1,7 @@
+## 1.5.0
+
+* more options for highlighting and scrolling
+
 ## 1.4.7
 
 * Don't generate items for commented out latex headings
