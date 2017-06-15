@@ -5,19 +5,6 @@
 @import "ui-variables";
 @import "syntax-variables";
 
-#draggable{
-    width: 100px;
-    height: 100px;
-    background: red;
-    margin: 10px 5px;
-}
-
-#dropzone {
-    width: 100px;
-    height: 100px;
-    border: 5px dashed #333;
-}
-
 .document-outline-section-highlight {
   background-color: @background-color-info;
 }
@@ -44,52 +31,20 @@ atom-text-editor.editor {
   }
 }
 
-
 .document-outline {
   position: relative;
-  width: 200px;
-  min-width: 100px;
-  height: 100%;
   padding: 4px;
   overflow-y: auto;
   overflow-x: hidden;
   cursor: default;
   user-select: none;
-  z-index: 2;
   display: flex;
   flex-direction: column;
-  //
-  // // use these classes to re-order
-  // // using a value in-between is fine too, e.g. order: -3;
-  // & > .order--start  { order: -10; }
-  // & > .order--center { order:   0; }
-  // & > .order--end    { order:  10; }
+  background-color: @app-background-color;
+
   document-tree {
     margin-left: 5px;
   }
-
-  .document-outline-resize-handle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -5px;
-    width: 10px;
-    cursor: col-resize;
-    z-index: 3;
-  }
-
-  // [draggable] {
-  //   user-select: none;
-  // }
-  heading-node {
-    // background: #900;
-  }
-  //
-  // heading-node:hover {
-  //   padding: 0px;
-  //   border: @pane-item-border-color 1px solid;
-  //   border-radius: 3px;
-  // }
 
   .droptarget {
       border-bottom: 5px;
@@ -101,6 +56,9 @@ atom-text-editor.editor {
     display: none;
   }
 
+  heading-node {
+  }
+
   heading-node.list-nested-item {
     margin-top: 2px;
     margin-bottom: 4px;
@@ -109,8 +67,9 @@ atom-text-editor.editor {
 
     &.highlight {
       color: @text-color;
-      background: fade(@background-color-highlight, 30%);
-      // background-blend-mode: soft-light;
+      background: fade(@background-color-highlight, 40%);
+      // background: @background-color-highlight;
+      background-blend-mode: soft-light;
       border: 1px solid @base-border-color;
       border-radius: @component-border-radius;
       padding: 0 3px;
@@ -127,9 +86,6 @@ atom-text-editor.editor {
       transition: background 0.5s linear;
     }
 
-    // .icon {
-    //   margin-right: 0em;
-    // }
     .icon.icon-chevron-down:before {
       margin-right: 0em;
     }
