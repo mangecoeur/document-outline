@@ -16,7 +16,7 @@
   "repository": "https://github.com/mangecoeur/document-outline",
   "license": "GPL-3.0",
   "engines": {
-    "atom": ">=1.11.0 <2.0.0"
+    "atom": ">=1.17.0 <2.0.0"
   },
   "dependencies": {
     "commonmark": "^0.27.0",
