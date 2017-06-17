@@ -1,3 +1,7 @@
+## 1.6.0
+
+* Converted to use Docks
+
 ## 1.5.0
 
 * more options for highlighting and scrolling
