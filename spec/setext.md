@@ -10,7 +10,7 @@ This is the level 2 text
 
 ### Here we might have ATX header instead
 
-Which should fit into the sam heiarchy as the the setext ones
+Which should fit into the same hierarchy as the the setext ones
 
 # Also if we choose to mix with ATX header that's cool too
 
