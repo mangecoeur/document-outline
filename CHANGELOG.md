@@ -1,3 +1,7 @@
+## 1.6.1
+
+* Allow heading tags in latex
+
 ## 1.6.0
 
 * Converted to use Docks
