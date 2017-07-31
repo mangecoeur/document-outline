@@ -6,8 +6,7 @@ import AsciiDocModel from '../lib/asciidoc-model';
 import path from 'path';
 import fs from 'fs';
 
-var testText = `The Article Title
-=================
+var testText = `= The Article Title
 Author's Name <authors@email.address>
 v1.0, 2003-12
 
@@ -21,8 +20,8 @@ index section titles are significant ('specialsections').
 
 :numbered!:
 [abstract]
-Example Abstract
-----------------
+== Example Abstract
+
 The optional abstract (one or more paragraphs) goes here.
 
 This document is an AsciiDoc article skeleton containing briefly
@@ -31,8 +30,8 @@ and footnotes.
 
 :numbered:
 
-The First Section
------------------
+== The First Section
+
 Article sections start at level 1 and can be nested up to four levels
 deep.
 footnote:[An example footnote.]
@@ -48,9 +47,9 @@ Note that multi-entry terms generate separate index entries.
 
 `;
 
-describe('ReStructuredTextModel', () => {
-  describe('when we run rst pass on a text buffer', () => {
-    it('should parse the rst text', () => {
+describe('AsciiDocTextModel', () => {
+  describe('when we run adoc pass on a text buffer', () => {
+    it('should parse the adoc text', () => {
       let buffer = new TextBuffer(testText);
 
       let model = new AsciiDocModel(buffer);
@@ -58,7 +57,7 @@ describe('ReStructuredTextModel', () => {
       expect(headings.length).toEqual(1);
       expect(headings[0].children.length).toEqual(2);
     });
-    it('should parse a rst file text', () => {
+    it('should parse an adoc file text', () => {
       let src = path.join(__dirname, "..", "spec", "test.adoc");
       // let src = 'atom://document-outline/spec/test.json';
 

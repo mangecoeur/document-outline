@@ -1,5 +1,4 @@
-The Article Title
-=================
+= The Article Title
 Author's Name <authors@email.address>
 v1.0, 2003-12
 
@@ -13,8 +12,8 @@ index section titles are significant ('specialsections').
 
 :numbered!:
 [abstract]
-Example Abstract
-----------------
+== Example Abstract
+
 The optional abstract (one or more paragraphs) goes here.
 
 This document is an AsciiDoc article skeleton containing briefly
@@ -22,9 +21,8 @@ annotated element placeholders plus a couple of example index entries
 and footnotes.
 
 :numbered:
+== The First Section
 
-The First Section
------------------
 Article sections start at level 1 and can be nested up to four levels
 deep.
 footnote:[An example footnote.]
@@ -60,16 +58,16 @@ Lorum ipum...
 ===============================================
 
 [[X1]]
-Sub-section with Anchor
-~~~~~~~~~~~~~~~~~~~~~~~
+=== Sub-section with Anchor
+
 Sub-section at level 2.
 
-A Nested Sub-section
-^^^^^^^^^^^^^^^^^^^^
+==== A Nested Sub-section
+
 Sub-section at level 3.
 
-Yet another nested Sub-section
-++++++++++++++++++++++++++++++
+===== Yet another nested Sub-section
+
 Sub-section at level 4.
 
 This is the maximum sub-section depth supported by the distributed
@@ -77,8 +75,8 @@ AsciiDoc configuration.
 footnote:[A second example footnote.]
 
 
-The Second Section
-------------------
+== The Second Section
+
 Article sections are at level 1 and can contain sub-sections nested up
 to four deep.
 
@@ -91,19 +89,19 @@ An example link to a bibliography entry <<taoup>>.
 :numbered!:
 
 [appendix]
-Example Appendix
-----------------
+== Example Appendix
+
 AsciiDoc article appendices are just just article sections with
 'specialsection' titles.
 
-Appendix Sub-section
-~~~~~~~~~~~~~~~~~~~~
+=== Appendix Sub-section
+
 Appendix sub-section at level 2.
 
 
 [bibliography]
-Example Bibliography
---------------------
+== Example Bibliography
+
 The bibliography list is a style of AsciiDoc bulleted list.
 
 [bibliography]
@@ -115,8 +113,8 @@ The bibliography list is a style of AsciiDoc bulleted list.
 
 
 [glossary]
-Example Glossary
-----------------
+== Example Glossary
+
 Glossaries are optional. Glossaries entries are an example of a style
 of AsciiDoc labeled lists.
 
@@ -130,8 +128,7 @@ A second glossary term::
 
 ifdef::backend-docbook[]
 [index]
-Example Index
--------------
+== Example Index
 ////////////////////////////////////////////////////////////////
 The index is normally left completely empty, it's contents being
 generated automatically by the DocBook toolchain.
