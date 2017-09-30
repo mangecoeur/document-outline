@@ -1,3 +1,7 @@
+## 1.6.2
+
+* Speed up Latex parsing by using (experimental) native buffer search, also improve performance in fallback mode.
+
 ## 1.6.1
 
 * Allow heading tags in latex
