@@ -1,10 +1,11 @@
 ---
 front: matter
 in: yaml
----
+...
+
 
 ------------------------
-Might start with heading
+Might start with heading: and have colon
 ------------------------
 
 
