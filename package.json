@@ -2,7 +2,7 @@
   "name": "document-outline",
   "main": "./lib/document-outline",
   "version": "1.6.8",
-  "description": "Show a heirarchical outline of a text document",
+  "description": "Show a hierarchical outline of a text document",
   "keywords": [
     "outline",
     "markdown",
