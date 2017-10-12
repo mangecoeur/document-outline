@@ -1,7 +1,7 @@
 {
   "name": "document-outline",
   "main": "./lib/document-outline",
-  "version": "1.6.13",
+  "version": "1.6.14",
   "description": "Show a hierarchical outline of a text document",
   "keywords": [
     "outline",
