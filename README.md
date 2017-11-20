@@ -13,6 +13,7 @@ Currently supports:
 - ReStructuredText
 - AsciiDoc
 - Knitr
+- Python
 
 ## Usage
 
