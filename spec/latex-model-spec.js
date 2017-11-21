@@ -1,10 +1,9 @@
-'use babel';
 /* eslint-env node, browser, jasmine */
 
-import {TextBuffer} from 'atom';
-import LatexModel from '../lib/latex-model';
-import path from 'path';
-import fs from 'fs';
+const {TextBuffer} = require('atom');
+const {LatexModel} = require('../lib/latex-model');
+const path = require('path');
+const fs = require('fs');
 
 // Need String.raw to use literal backslash character.
 var testText = String.raw`

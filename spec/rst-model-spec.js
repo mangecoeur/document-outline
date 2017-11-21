@@ -1,10 +1,10 @@
 'use babel';
 /* eslint-env node, browser, jasmine */
 
-import {TextBuffer} from 'atom';
-import ReStructuredTextModel from '../lib/rst-model';
-import path from 'path';
-import fs from 'fs';
+const {TextBuffer} = require('atom');
+const {ReStructuredTextModel} = require('../lib/rst-model');
+const path = require('path');
+const fs = require('fs');
 
 var testText = `=========================================
 ReStructuredText (rst): plain text markup

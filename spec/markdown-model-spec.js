@@ -1,10 +1,10 @@
 'use babel';
 /* eslint-env node, browser, jasmine */
 
-import {TextBuffer} from 'atom';
-import MarkdownModel from '../lib/markdown-model';
-import path from 'path';
-import fs from 'fs';
+const {TextBuffer} = require('atom');
+const {MarkdownModel} = require('../lib/markdown-model');
+const path = require('path');
+const fs = require('fs');
 
 var testText = `# first h1
 

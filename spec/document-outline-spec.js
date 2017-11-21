@@ -1,7 +1,6 @@
-'use babel';
 /* eslint-env node, browser, jasmine */
 
-import path from 'path';
+const path = require('path');
 
 describe('DocumentOutline', () => {
   let editor, workspaceElement, activationPromise;

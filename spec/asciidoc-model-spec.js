@@ -1,10 +1,9 @@
-'use babel';
 /* eslint-env node, browser, jasmine */
 
-import {TextBuffer} from 'atom';
-import AsciiDocModel from '../lib/asciidoc-model';
-import path from 'path';
-import fs from 'fs';
+const {TextBuffer} = require('atom');
+const {AsciiDocModel} = require('../lib/asciidoc-model');
+const path = require('path');
+const fs = require('fs');
 
 var testText = `= The Article Title
 Author's Name <authors@email.address>

@@ -1,11 +1,10 @@
-'use babel';
 /* eslint-env node, browser, jasmine */
 
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-import DocumentOutlineView from '../lib/document-outline-view';
-import MockModel from '../lib/mock-model';
+const {DocumentOutlineView} = require('../lib/document-outline-view');
+const {MockModel} = require('../lib/mock-model');
 
 describe('DocumentOutlineView', () => {
   it('Creates a new view object', () => {
