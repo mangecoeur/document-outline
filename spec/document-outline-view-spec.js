@@ -19,7 +19,7 @@ describe('DocumentOutlineView', () => {
       let mockHeadings = JSON.parse(fs.readFileSync(src));
       let mockModel = new MockModel(mockHeadings.headings);
       let view = new DocumentOutlineView(editor, mockModel);
-      expect(view).toExist();
+      expect(view).toBeDefined();
     });
   });
 });
