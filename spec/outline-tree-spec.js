@@ -1,5 +1,5 @@
 /* eslint-env node, browser, jasmine */
-const {OutlineTreeView, OutlineTreeRoot} = require('../lib/outline-tree');
+const {OutlineTreeView} = require('../lib/outline-tree');
 
 describe('OutlineTreeView', () => {
   describe('When a single node with no children is created', () => {
@@ -19,13 +19,5 @@ describe('OutlineTreeView', () => {
       let el = view.render();
       expect(el).toBeDefined();
     });
-  });
-});
-describe('OutlineTreeRoot', () => {
-  it('Should render an root list', () => {
-    let items = [{icon: 'icon-morder-board', plainText: 'test child 1'}];
-    let view = new OutlineTreeRoot(items);
-    let el = view.render();
-    expect(el).toBeDefined();
   });
 });
