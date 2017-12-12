@@ -1,8 +1,13 @@
 # Document Outline
 
-Displays a hierarchical, interactive outline tree view for document markup. Also registers as an outline provider for Atom-IDE for the supported document types.
+Displays a hierarchical, interactive outline tree view for document markup.
 
 ![screenshot of document-outline](https://raw.githubusercontent.com/mangecoeur/document-outline/master/document-outline-screenshot.png)
+
+Also registers as an outline provider for Atom-IDE for the supported document types.
+
+![screenshot of document-outline using atom-ide UI](https://raw.githubusercontent.com/mangecoeur/document-outline/master/atom-ide-outline-screenshot.png)
+
 
 ## Support types
 

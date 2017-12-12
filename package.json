@@ -11,7 +11,8 @@
     "knitr",
     "academic",
     "text",
-    "asciidoc"
+    "asciidoc",
+    "atom-ide"
   ],
   "repository": "https://github.com/mangecoeur/document-outline",
   "license": "GPL-3.0",
