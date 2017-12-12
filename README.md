@@ -1,6 +1,6 @@
 # Document Outline
 
-Displays a hierarchical, interactive outline tree view of your document. This is particularly useful for working on long form documents such as academic papers and theses.
+Displays a hierarchical, interactive outline tree view for document markup. Also registers as an outline provider for Atom-IDE for the supported document types.
 
 ![screenshot of document-outline](https://raw.githubusercontent.com/mangecoeur/document-outline/master/document-outline-screenshot.png)
 
@@ -17,6 +17,8 @@ Currently supports:
 ## Usage
 
 Trigger using `document-outline:toggle` or enable `show by default` setting. Single click to jump to heading in document, double click to collapse sub-headings.
+
+Alternatively, enable the outline view of Atom-IDE (and disable the `show by default` setting).
 
 Note: for simplicity, only 'modern' UI themes are supported (i.e. not the atom-light or atom-dark themes). Should work for popular UI themes including One-light/dark and Atom-material.
 
