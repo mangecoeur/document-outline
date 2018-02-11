@@ -1,3 +1,8 @@
+## 2.1.0
+* Change the outline styling to use syntax colors like atom-ide outline
+* Improve contrast of currently selected outline
+* Icon for outline pane
+
 ## 2.0.0
 * Changed outline view to use virtual dom for more consistent performance
 * Support the outline view in Atom IDE
