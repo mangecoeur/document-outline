@@ -1,4 +1,4 @@
-# Imagine subiecta suppressit monte vulnera blah blah blah 1
+# Imagine subiecta suppressit monte vulnera blah blah blah1
 
 Needs some content
 
@@ -37,7 +37,7 @@ choro de peterem, dis tu aequora unde cervicem iam vidisti.
 
 #### Troiana lumine 7
 
-Lorem markdownum remorum flenti ius sed sanguine iussus doctior: o gratia
+Lorem markdownuam remorum flenti ius sed sanguine iussus doctior: o gratia
 miratur sinunt volvuntur carmen cognoscenda. Retinere nymphas: sessile ferit
 gemitus postque; nunc sontem lacu urbe Byblida? Petit dent dubitat, nec castaque
 terris nimium. Sine deae in vel spem plangorem deus montes nova pares, non.
