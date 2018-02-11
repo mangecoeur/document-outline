@@ -42,8 +42,4 @@ Some handy packages for working on long form markdown documents:
 - [build](https://atom.io/packages/build) plus `build-makefile`. If you use Pandoc to build serious documents, your pandoc command starts to get pretty fancy. Do yourself a favour and write a makefile for that, then use atom-build to easily trigger building your document from the editor.
 
 
-## TODO
-
-- drag-and-drop reordering of headings
-
 Contributions welcome!

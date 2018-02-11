@@ -61,6 +61,10 @@ atom-text-editor.editor {
     margin-bottom: 4px;
     padding: 1px 4px;
     display: list-item;
+    span.tree-item-text {
+      line-height: normal;
+      font-weight: normal;
+    }
 
     &.highlight {
       color: @text-color;
@@ -71,11 +75,10 @@ atom-text-editor.editor {
       border-radius: @component-border-radius;
       padding: 0 3px;
 
-    }
+      span.tree-item-text {
+        // &:extend(.text-highlight);
 
-    span.tree-item-text {
-      line-height: normal;
-      font-weight: normal;
+      }
     }
 
     span.tree-item-text.selected{
@@ -88,7 +91,8 @@ atom-text-editor.editor {
 		  width: 16px;
 	  }
 
-    .icon.icon-chevron-down:before {
+    .icon.icon-chevron-down:before, .icon.icon-chevron-right:before {
+      font-size: 1.1em;
       margin-right: 0em;
     }
 
@@ -99,7 +103,7 @@ atom-text-editor.editor {
 
     .icon.icon-one-dot:before {
         content: "\25cf";
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
 
     span.tree-item-text {
