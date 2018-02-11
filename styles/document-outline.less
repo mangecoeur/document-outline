@@ -5,85 +5,76 @@
 @import "ui-variables";
 @import "syntax-variables";
 
-.document-outline-section-highlight {
-  background-color: @background-color-info;
-}
-
-.document-outline-section-highlight .region{
-  background-color: @background-color-info;
-}
+// .document-outline-section-highlight {
+//   background-color: @background-color-info;
+// }
+//
+// .document-outline-section-highlight .region{
+//   background-color: @background-color-info;
+// }
 
 // result markers
-atom-text-editor.editor {
-  .document-section .region {
-    background-color: @syntax-result-marker-color;
-    border-radius: @component-border-radius;
-    border: 1px solid @syntax-result-marker-color;
-    box-sizing: border-box;
-    z-index: 0;
-  }
-
-  .current-section .region {
-    border-radius: @component-border-radius;
-    border: 1px solid @syntax-result-marker-color-selected;
-    box-sizing: border-box;
-    z-index: 0;
-  }
-}
+// atom-text-editor.editor {
+//   .document-section .region {
+//     background-color: @syntax-result-marker-color;
+//     border-radius: @component-border-radius;
+//     border: 1px solid @syntax-result-marker-color;
+//     box-sizing: border-box;
+//     z-index: 0;
+//   }
+//
+//   .current-section .region {
+//     border-radius: @component-border-radius;
+//     border: 1px solid @syntax-result-marker-color-selected;
+//     box-sizing: border-box;
+//     z-index: 0;
+//   }
+// }
 
 .document-outline {
-  position: relative;
   padding: 4px;
+  margin-left: 5px;
+  display: block;
   overflow-y: auto;
   overflow-x: hidden;
-  cursor: default;
   user-select: none;
   display: flex;
   flex-direction: column;
-  background-color: @app-background-color;
-
-    margin-left: 5px;
-    display: block;
-
-
-  .droptarget {
-      border-bottom: 5px;
-      border-style: solid;
-      border-color: @background-color-info;
-  }
-
-  .leaf ol{
-    display: none;
-  }
+  color: @syntax-text-color;
 
   .list-nested-item {
     margin-top: 2px;
     margin-bottom: 4px;
     padding: 1px 4px;
     display: list-item;
+
     span.tree-item-text {
       line-height: normal;
       font-weight: normal;
     }
 
-    &.highlight {
-      color: @text-color;
-      background: fade(@background-color-highlight, 40%);
-      // background: @background-color-highlight;
-      background-blend-mode: soft-light;
-      border: 1px solid @base-border-color;
-      border-radius: @component-border-radius;
+    &.item-highlight {
       padding: 0 3px;
 
-      span.tree-item-text {
-        // &:extend(.text-highlight);
+      border: 1px solid @pane-item-border-color;
+      border-radius: @component-border-radius;
+      // background: fade(@background-color-selected, 10%);
+      background-color: fade(overlay(@background-color-selected, @pane-item-background-color), 10%);
+      // background: @background-color-highlight;
+      // background-blend-mode: soft-light;
+      background-blend-mode: multiply;
 
+      span.tree-item-text {
+        font-weight: normal;
       }
     }
 
-    span.tree-item-text.selected{
-      background-color: @background-color-info;
-      transition: background 0.5s linear;
+    &.current {
+      // color: @text-color-selected;
+      & > span.tree-item-text {
+        font-weight: bold;
+        // text-shadow: 1px 0px 0px @text-color;
+      }
     }
 
     // used for constant indentation in tree hierarchy when compressing/expanding (@CBenghi)
@@ -106,31 +97,12 @@ atom-text-editor.editor {
         font-size: 0.5em;
     }
 
-    span.tree-item-text {
-      // font-weight: bold;
-      // text-decoration: underline;
-      // @pane-item-background-color
-      // @text-color
-      // border-bottom: 1px solid fade(@text-color, 0%);
-      // transition: border 500ms ease;
-    }
-
     span.tree-item-text:hover {
-      // font-weight: bold;
       text-decoration: underline;
-      // border-bottom: 1px solid fade(@text-color, 80%);
     }
 
     .list-tree {
       margin-left: 10px;
-    }
-
-    &.level1 span.tree-item-text{
-      font-weight: bold;
-    }
-
-    &.level2 span.tree-item-text{
-      font-weight: normal;
     }
 
     &.level1{
@@ -150,32 +122,3 @@ atom-text-editor.editor {
     }
   }
 }
-
-//
-//
-//
-// .symbols-context-menu {
-//   position: absolute;
-//   z-index: 1;
-//   width: 120px;
-//   .hidden-input {
-//     position: absolute;
-//     width: 0;
-//     height: 0;
-//     border: none;
-//   }
-//   .select-list.popover-list {
-//     width: 100%;
-//     min-width: 100%;
-//     ol {
-//       margin-top: 0;
-//       .separator {
-//         background: @background-color-highlight;
-//         height: 1px;
-//       }
-//       li:hover {
-//         background: @background-color-highlight;
-//       }
-//     }
-//   }
-// }
