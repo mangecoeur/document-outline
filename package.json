@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "commonmark": "^0.28.0",
-    "etch": "^0.12.7",
+    "etch": "^0.12.7"
   },
   "devDependencies": {
     "eslint": "^3.7.0",
