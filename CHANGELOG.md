@@ -2,6 +2,8 @@
 * Change the outline styling to use syntax colors like atom-ide outline
 * Improve contrast of currently selected outline
 * Icon for outline pane
+* Fix for issue #58 - return focus to editor after clicking heading
+
 
 ## 2.0.0
 * Changed outline view to use virtual dom for more consistent performance
