@@ -1,3 +1,6 @@
+## 2.1.1
+* Added option to auto collapse the outline
+
 ## 2.1.0
 * Change the outline styling to use syntax colors like atom-ide outline
 * Improve contrast of currently selected outline
