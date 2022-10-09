@@ -1,3 +1,5 @@
+> IMPORTANT: Development of the Atom editor is coming to an end, therefore this plugin will no longer be updated.
+
 # Document Outline
 
 Displays a hierarchical, interactive outline tree view for document markup.
